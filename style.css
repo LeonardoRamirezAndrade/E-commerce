@@ -2,23 +2,104 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-size: 62.5%;
 }
+
 
 
 :root {
     --white: #ffffff;
-    --black: #
-
-
-
-    --very-light-pink: #c7c7c7;
+    --black: #000;
+    --very-light-black: #777777;
     --text-input-field: #f7f7f7;
     --hospital-green: #acd9b2;
+    --sm: 14px; /*Esos Sm, md y LG son para los textos en un futuro y seran variables que se llaman con var() */
+    --md: 18px;
+    --lg: 20px
 
 }
 
 body {
-    font-size: 1.6rem;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Lobster Two', cursive;
+    display: flex;
 }
+
+.login {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.form-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 48px;
+    justify-self: center;
+    display: inline;
+}
+
+.title {
+    font-size: var(--lg);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--very-light-black);
+    font-size: var(--md);
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.input {
+    background-color: var(--text-input-field);
+    border: none;
+    border-radius: 8px;
+    border-color: #3c3c3c;
+    height: 32px;
+    font-size: var(--md);
+    padding: 4px;
+    margin-bottom: 12px;
+}
+
+.primary-button {
+    background-color: var(--hospital-green);
+    border-radius: 17px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 47px;
+}
+
+.login-button {
+    margin-top: 14px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 640px) {
+    .logo {
+        display: block;
+    } 
+}
+
