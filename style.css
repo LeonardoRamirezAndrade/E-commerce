@@ -79,6 +79,37 @@ body {
     padding: 4px;
     margin-bottom: 12px;
 }
+.email-image {
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-color: var(--text-input-field);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.email-image img {
+    width: 80px;
+}
+
+.resend {
+    font-size: var(--sm);
+}
+.resend span {
+    color: var(--very-light-black);
+}
+.resend a {
+    color: var(--hospital-green);
+    text-decoration: none;   
+}
+.form-container-two {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+    justify-items: center;
+}
 
 .primary-button {
     background-color: var(--hospital-green);
