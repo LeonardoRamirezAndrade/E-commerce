@@ -10,6 +10,7 @@
     --white: #ffffff;
     --black: #000;
     --very-light-black: #777777;
+    --very-light-pink: rgb(255, 207, 215);
     --text-input-field: #f7f7f7;
     --hospital-green: #acd9b2;
     --sm: 14px; /*Esos Sm, md y LG son para los textos en un futuro y seran variables que se llaman con var() */
@@ -35,6 +36,13 @@ body {
     grid-template-rows: auto 1fr auto;
     width: 300px;
 }
+.form-container-solid {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+    padding: 4px;
+    border: solid;
+}
 
 .logo {
     width: 150px;
@@ -45,8 +53,15 @@ body {
 
 .title {
     font-size: var(--lg);
-    margin-bottom: 12px;
+    margin-bottom: 27px;
     text-align: center;
+}
+.title-two {
+    font-size: var(--lg);
+    margin-bottom: 12px;
+    text-align: start;
+    border: solid;
+    padding: 4px;
 }
 
 .subtitle {
@@ -62,6 +77,10 @@ body {
     display: flex;
     flex-direction: column;
 }
+.form div {
+    display: flex;
+    flex-direction: column;
+}
 
 .form a {
     color: var(--hospital-green);
@@ -70,15 +89,41 @@ body {
     text-decoration: none;
     margin-bottom: 52px;
 }
-
-.input-email {
-    margin-bottom: 22px;
+.form-solid {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    padding: 4px;
 }
+.form-solid div {
+    display: flex;
+    flex-direction: column; 
+}
+.form a {
+    color: var(--hospital-green);
+    font-size: var(--sm);
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 52px;
+}
+
+.put-solid {
+    border: solid;
+    padding: 4px;
+}
+
 
 .label {
     font-size: var(--sm);
     font-weight: bold;
     margin-bottom: 4px;
+}
+.label-solid {
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-bottom: 4px;
+    padding: 4px;
+    border: solid;
 }
 
 .input {
@@ -91,6 +136,12 @@ body {
     padding: 4px;
     margin-bottom: 12px;
 }
+.input-name,
+.input-password,
+.input-email {
+    margin-bottom: 22px;
+}
+
 .email-image {
     width: 132px;
     height: 132px;
@@ -104,6 +155,14 @@ body {
 
 .email-image img {
     width: 80px;
+}
+
+.value {
+    color: var(--very-light-black);
+    font-size: var(--md);
+    margin: 8px 0px 32px 0px;
+    padding: 4px;
+    border: solid;
 }
 
 .resend {
@@ -145,6 +204,17 @@ body {
     font-weight: bold;
     height: 47px;
 }
+.secondary-button-solid {
+    background-color: var(--white);
+    border-radius: 17px;
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(255, 0, 0);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 47px;
+}
 
 .login-button {
     margin-top: 14px;
@@ -161,5 +231,11 @@ body {
         bottom: 0;
         margin-bottom: 24px;
     }
+    .form {
+        height: 100%;
+        justify-content: space-between;
+    }
 }
+
+
 
